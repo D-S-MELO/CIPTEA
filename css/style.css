@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  background-color: #dbe8fb;
+  color: #252c32;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top {
+  position: relative;
+  background: #2c3e50;
+  height: 11vh;
+  border-bottom-left-radius: 30% 0%;
+  border-bottom-right-radius: 30% 0%;
+}
+.container {
+  border: 4px double;
+  height: 110vh;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(18, minmax(10px, 50px));
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.titulo {
+  grid-area: 1 / 1 / 1 / 6;
+}
+
+.photograph {
+  grid-area: 6 / 1 / 6 / 1;
+}
+
+.qr {
+  grid-area: 12 / 1 / 12 / 1;
+}
+
+.titulo_dados_pessoais {
+  grid-area: 4 / 2 / 3 / 4;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.nome {
+  grid-area: 5 / 2 / 5/ 5;
+}
+.mae {
+  grid-area: 6 / 2 / 6 / 6;
+}
+.pai {
+  grid-area: 6 / 3 / 6/ 6;
+}
+.cpf {
+  grid-area: 7 / 2 / 8 / 8;
+}
+
+.rg {
+  grid-area: 7 / 3 / 8 / 8;
+}
+.naturalidade {
+  grid-area: 8 / 2 / 10 / 10;
+}
+.nascimento {
+  grid-area: 8 / 3 / 11 / 11;
+}
+.contato_emergencia {
+  grid-area: 9/ 2 / 12/ 12;
+}
+.contato1 {
+  grid-area: 9/ 3 / 12/ 12;
+}
+.contato2 {
+  grid-area: 9/ 4 / 12/ 12;
+}
+
+.conteudo_sobre {
+  grid-area: 10 / 1 / 10 / 10;
+}
+
+.sobre {
+  grid-area: 11 / 2 / 11 / 11;
+  margin-left: 50px;
+}
+
+.conteudo_titulo,
+.titulo_dados_pessoais,
+.conteudo_sobre {
+  font-size: 24px;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.qrCode,
+.foto {
+  height: 160px;
+  width: 160px;
+  margin-left: 100px;
+  border: 4px double;
+}
+
+.nome,
+.mae,
+.pai,
+.cpf,
+.rg,
+.nascimento,
+.naturalidade,
+.contato_emergencia {
+  color: #000000;
+  margin-left: 50px;
+}
+
+.contato1,
+.contato2,
+li {
+  color: red;
+  margin-left: 2px;
+}
+
+/* Adicionando uma media query para dispositivos com largura de tela menor */
+@media only screen and (max-width: 740px) {
+  .top {
+    position: relative;
+    background: #2c3e50;
+    height: 8vh;
+    border-bottom-left-radius: 30% 0%;
+    border-bottom-right-radius: 30% 0%;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(24, minmax(10px, 50px));
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .container {
+    border: none;
+  }
+  .titulo {
+    grid-area: 1 / 1 / 4 / 5;
+  }
+
+  .photograph {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .qr {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+
+  .titulo_dados_pessoais {
+    grid-area: 7 / 1 / 5 / 5;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .nome {
+    grid-area: 8 / 1 / 6/ 6;
+  }
+  .mae {
+    grid-area: 9 / 1 / 7 / 7;
+  }
+  .pai {
+    grid-area: 10 / 1 / 8/ 8;
+  }
+  .cpf {
+    grid-area: 11 / 1 / 9 / 9;
+  }
+
+  .rg {
+    grid-area: 12 / 1 / 10 / 10;
+  }
+  .naturalidade {
+    grid-area: 13 / 1 / 11 / 11;
+  }
+  .nascimento {
+    grid-area: 14 / 1 / 12 / 12;
+  }
+  .contato_emergencia {
+    grid-area: 15/ 1 / 13/ 13;
+  }
+  .contato1 {
+    grid-area: 16/ 1 / 14/ 14;
+  }
+  .contato2 {
+    grid-area: 17/ 1 / 15/ 15;
+  }
+
+  .conteudo_sobre {
+    grid-area: 18 / 1 / 16 / 16;
+  }
+
+  .sobre {
+    grid-area: 20 / 1 / 17 / 17;
+    text-align: left;
+  }
+
+  .conteudo_titulo,
+  .titulo_dados_pessoais,
+  .conteudo_sobre {
+    font-size: 16px;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .qrCode,
+  .foto {
+    height: 90px;
+    width: 90px;
+    margin-left: 50px;
+  }
+
+  .nome,
+  .mae,
+  .pai,
+  .cpf,
+  .rg,
+  .nascimento,
+  .naturalidade,
+  .contato_emergencia {
+    color: #000000;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .contato1,
+  .contato2 {
+    color: red;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+  li {
+    color: red;
+  }
+}
